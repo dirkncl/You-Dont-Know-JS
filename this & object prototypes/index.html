@@ -1,0 +1,60 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>You Dont Know JS</title>
+    <script src="../assets/marked.js"></script>
+    <script>
+      window.onload = function(){
+        var toc = ['toc.md','README.md','foreword.md','ch1.md','ch2.md','ch3.md','ch4.md','ch5.md','ch6.md','apA.md','apB.md'];
+        var iframeHolder = document.getElementById('content');
+        var liArray = document.getElementsByTagName('li');
+        var readyIframe=readMD(liArray, toc);
+        
+        iframeView(marked(readyIframe[0]),iframeHolder);
+        
+        liArray[0].onclick = function(){iframeView(marked(readyIframe[0]),iframeHolder)}
+        liArray[1].onclick = function(){iframeView(marked(readyIframe[1]),iframeHolder)}
+        liArray[2].onclick = function(){iframeView(marked(readyIframe[2]),iframeHolder)}
+        liArray[3].onclick = function(){iframeView(marked(readyIframe[3]),iframeHolder)}
+        liArray[4].onclick = function(){iframeView(marked(readyIframe[4]),iframeHolder)}
+        liArray[5].onclick = function(){iframeView(marked(readyIframe[5]),iframeHolder)}
+        liArray[6].onclick = function(){iframeView(marked(readyIframe[6]),iframeHolder)}
+        liArray[7].onclick = function(){iframeView(marked(readyIframe[7]),iframeHolder)}
+        liArray[8].onclick = function(){iframeView(marked(readyIframe[8]),iframeHolder)}
+        liArray[9].onclick = function(){iframeView(marked(readyIframe[9]),iframeHolder)}
+        liArray[10].onclick = function(){iframeView(marked(readyIframe[10]),iframeHolder)}
+      }
+    </script>  
+  </head>
+  <!---   ---->
+  <body>
+    <div style='position:absolute;top:0px;width:23%;height:100%;left:0;margin-left:20px;margin-top:15px'>
+      Online Reader <br>
+      By Dirk Levinus Nicolaas.
+      <hr>
+      <b><li>Table of Contents</li></b>
+      <li>Preface</li>
+      <li>Foreword</li>
+      <li>Chapter 1: *this* Or That?</li>
+      <li>Chapter 2: *this* All Makes Sense Now!</li>
+      <li>Chapter 3: Objects</li>
+      <li>Chapter 4: Mixing (Up) "Class" Objects</li>
+      <li>Chapter 5: Prototypes</li>
+      <li>Chapter 6: Behavior Delegation/li>
+      <li>Appendix A: ES6 *class*</li>
+      <li>Appendix B: Thank You's!</li>
+      <hr>
+      <h3>Main Contents</h3>
+      <a href='../index.html'>You-Dont-Know-JS</a></br>
+      <a href='../up & going/index.html'>Up & Going</a></br>
+      <a href='../scope & closures/index.html'>Scope & Closures</a></br>
+      <a href='../this & object prototypes/index.html'>this & Object Prototypes</a></br>
+      <a href='../types & grammar/index.html'>Types & Grammar</a></br>
+      <a href='../async & performance/index.html'>Async & Performance</a></br>
+      <a href='../es6 & beyond/index.html'>ES6 & Beyond</a></br>
+    </div>
+    <div style='position:absolute;top:0px;width:70%;height:100%;right:0%' id="content"></div>
+  </body>
+</html>

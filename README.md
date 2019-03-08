@@ -1,4 +1,5 @@
 # You Don't Know JS (book series)
+( Online from Github version https://dirkncl.github.io/You-Dont-Know-JS/index.html )
 
 This is a series of books diving deep into the core mechanisms of the JavaScript language. The first edition of the series is now complete.
 
